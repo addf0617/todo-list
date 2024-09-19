@@ -2,7 +2,31 @@ import React, { Component } from "react";
 import "./App.css";
 import ListComponent from "./components/list-component";
 
-class App extends Component {
+type Task = {
+  name: string;
+  date: number;
+  completed: boolean;
+};
+
+const DATA: Task[] = [
+  { name: "Create React App", date: Date.now(), completed: false },
+  { name: "Learn React", date: Date.now(), completed: false },
+  { name: "Create a Todo App", date: Date.now(), completed: true },
+];
+
+//新增這行
+type AppState = {
+  tasks: Task[];
+};
+
+//更改過這行
+class App extends Component<{}, AppState> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      tasks: DATA,
+    };
+  }
   render() {
     return (
       <div className="App">
@@ -15,8 +39,17 @@ class App extends Component {
             <option value="Completed">Completed</option>
           </select>
         </div>
+
         <div className="list-container">
-          <ListComponent />
+          {this.state.tasks.map((task) => {
+            return (
+              <ListComponent
+                name={task.name}
+                date={task.date}
+                completed={task.completed}
+              />
+            );
+          })}
         </div>
       </div>
     );
