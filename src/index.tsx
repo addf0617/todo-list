@@ -1,11 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+
+/* const DATA: { name: string; date: number; completed: boolean } = [
+  { name: "Create React App", date: Date.now(), completed: false },
+  { name: "Learn React", date: Date.now(), completed: false },
+  { name: "Create a Todo App", date: Date.now(), completed: false },
+]; */
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
