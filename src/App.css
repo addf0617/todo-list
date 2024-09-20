@@ -52,7 +52,13 @@ button {
   display: flex;
   align-items: center;
   background-color: #fff;
-  justify-content: space-around;
+}
+
+.list form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .list input {
@@ -63,4 +69,8 @@ button {
 .list .list-button-group {
   display: flex;
   gap: 0.5rem;
+}
+
+#newTask {
+  height: 2rem;
 }
