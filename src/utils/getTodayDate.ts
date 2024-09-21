@@ -1,4 +1,4 @@
-export function getDay(): string {
+export function getTodayDate(): string {
   const timeElapsed: number = Date.now();
   const today: Date = new Date(timeElapsed);
   return today.toISOString();

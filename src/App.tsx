@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { nanoid } from "nanoid";
-import { getDay } from "./utils/getDate";
+import { getTodayDate } from "./utils/getTodayDate";
 import "./App.css";
 import ListComponent from "./components/list-component";
 
@@ -15,14 +15,14 @@ const DATA: Task[] = [
   {
     id: nanoid(),
     name: "Create React App",
-    date: getDay(),
+    date: getTodayDate(),
     completed: false,
   },
-  { id: nanoid(), name: "Learn React", date: getDay(), completed: false },
+  { id: nanoid(), name: "Learn React", date: getTodayDate(), completed: false },
   {
     id: nanoid(),
     name: "Create a Todo App",
-    date: getDay(),
+    date: getTodayDate(),
     completed: true,
   },
 ];
@@ -68,7 +68,7 @@ class App extends Component<{}, AppState> {
     let newTask: Task = {
       id: nanoid(),
       name: this.state.currentInput,
-      date: getDay(),
+      date: getTodayDate(),
       completed: false,
     };
     this.setState({
@@ -159,7 +159,9 @@ class App extends Component<{}, AppState> {
                   editButtonClickHandler={() =>
                     this.editButtonClickHandler(task.id)
                   }
-                  deleteButtonClickHandler={() => this.deleteButtonClickHandler}
+                  deleteButtonClickHandler={() =>
+                    this.deleteButtonClickHandler(task.id)
+                  }
                 />
               );
             })}
