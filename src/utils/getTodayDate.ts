@@ -1,5 +1,4 @@
 export function getTodayDate(): string {
-  const timeElapsed: number = Date.now();
-  const today: Date = new Date(timeElapsed);
-  return today.toISOString();
+  const today: Date = new Date();
+  return today.toLocaleDateString() + " " + today.toLocaleTimeString();
 }

@@ -122,7 +122,7 @@ class App extends Component<{}, AppState> {
     return (
       <div className="App">
         <h1>TODO LIST</h1>
-        <div className="filter">
+        <div className="filter-container">
           <button onClick={this.addButtonClickHandler}>Add task</button>
           <select
             name="selected"

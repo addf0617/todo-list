@@ -22,17 +22,22 @@ body {
   gap: 0.5rem;
 }
 
-.filter {
+.filter-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.filter-container select {
+  width: 6rem;
+  border-radius: 0.5rem;
 }
 
 button {
   border: none;
   padding: 0.5rem 1rem;
   color: #fff;
-  background-color: blueviolet;
+  background-color: rgb(100, 90, 243);
   border-radius: 0.5rem;
   cursor: pointer;
 }
@@ -44,6 +49,7 @@ button {
   flex-direction: column;
   background-color: antiquewhite;
   gap: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .list-container .list {
