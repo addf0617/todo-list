@@ -37,10 +37,10 @@ class ListComponent extends Component<ListComponentProps> {
           <div className="list-button-group">
             {/*這裡要把type設定成button，不然會觸發submit，導致表單重置，或者也可以取消提交事件*/}
             <button type="button" onClick={deleteButtonClickHandler}>
-              D
+              <i className="fa-solid fa-trash"></i>
             </button>
             <button type="button" onClick={editButtonClickHandler}>
-              E
+              <i className="fa-solid fa-pen"></i>
             </button>
           </div>
         </form>
